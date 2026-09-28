@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển Đổi Ảnh</title>
+    
+    <style>
+        body {
+            background-image: url("Screenshot 2026-09-28 100535.png");
+            /* Thêm thuộc tính này nếu muốn nền hiển thị đẹp hơn */
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    
+
+
+    <!-- Thẻ hiển thị ảnh -->
+    <img id="myImage" src="Screenshot 2026-09-28 095032.png" width="800">
+
+    <br><br>
+
+    <!-- Các nút bấm điều khiển -->
+    <button onclick="luive()">Lùi về</button>
+    <button onclick="tienlen()">Tiến lên</button>
+
+    <script>
+        // 1. Tạo mảng chứa danh sách các đường dẫn ảnh
+        var danhsachAnh = [
+            "Screenshot 2026-09-28 095032.png",
+            "Screenshot 2026-09-28 095105.png",
+            "Screenshot 2026-09-28 095546.png",
+            "Screenshot 2026-09-28 095710.png",
+            "Screenshot 2026-09-28 095948.png",
+            "Screenshot 2026-09-28 100037.png"
+        ];
+
+        // 2. Biến lưu vị trí ảnh hiện tại (mặc định ban đầu là ảnh 0)
+        var i = 0;
+
+        // Hàm tiến lên (chuyển sang ảnh tiếp theo)
+        function tienlen() {
+            if (i < danhsachAnh.length - 1) {
+                i++; // Tăng vị trí lên 1
+            } else {
+                i = 0; // Nếu ở ảnh cuối thì quay về ảnh đầu tiên
+            }
+            document.getElementById('myImage').src = danhsachAnh[i];
+        }
+
+        // Hàm lùi về (quay lại ảnh phía trước)
+        function luive() {
+            if (i > 0) {
+                i--; // Giảm vị trí đi 1
+            } else {
+                i = danhsachAnh.length - 1; // Nếu ở ảnh đầu thì quay lại ảnh cuối cùng
+            }
+            document.getElementById('myImage').src = danhsachAnh[i];
+        }
+    </script>
+
+</body>
+</html>
