@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bt4,4b</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <script>
+        function cthoten(txt)
+        {
+            document.getElementById("txt1").value = "txthoten"
+            alert("điền họ tên của bạn");
+        }
+        function ctdonvi(txt) 
+        {
+            document.getElementById("txt2").value = "txtdonvi"
+            alert("điền đơn vị của bạn");
+        }
+    </script>
+    <form>
+        <input type ="txthoten"
+        id="txt1"
+        value = "Chào">
+        <input type ="txtdonvi"
+        id="txt2"
+        value = "Đơn vị">
+        <input type = "button"
+        name = "hoten"
+        value = "Họ tên" 
+        onclick = "cthoten('txthoten')">
+        <input type = "button"
+        name = "donvi"
+        value = "Đơn vị" 
+        onclick = "ctdonvi('txtdonvi')">
+    </form>
+</body>
+</html>
