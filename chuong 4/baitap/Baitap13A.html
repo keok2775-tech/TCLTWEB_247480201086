@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bt4,13a</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <h2>Hãy nhập hai số và click vào nút tính tổng</h2>
+    <p>so hang 1: </p><input type="text" name="sohang1"id="sohang1" > 
+    <p>so hang 2: </p><input type="text"  name="sohang2"id="sohang2"> 
+    <p>ket qua: </p><input type="text"  name="ketqua"id="ketqua">
+    <input type="button" value="Cộng" onclick="tinhtong()">
+    <script>
+        function tinhtong()
+        {
+            let so1 = parseFloat(document.getElementsByName("sohang1")[0].value);
+            let so2 = parseFloat(document.getElementsByName("sohang2")[0].value);
+            let tong = so1 + so2;
+            document.getElementsByName("ketqua")[0].value = tong;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+c<!DOCTYPE html>
+<html>
+<head>
+    <title>Bt4,20b</title>
+    <meta charset="UTF-8">
+</head>
+<body style="font-family: arial;background-color: pink;">
+    <script>
+        function tinh() 
+        {
+            var namvaolam = document.getElementById("namvaolam").value;
+            var heso = document.getElementById("heso").value;
+            var luongcoso = document.getElementById("luongcoso").value;
+            document.getElementById("thamnien").value = 2025 - namvaolam;
+            document.getElementById("luongcoban").value = heso * parseFloat(luongcoso);
+            document.getElementById("phucap").value = parseFloat(document.getElementById("luongcoban").value) * 0.25;
+            document.getElementById("thanhtien").value = parseFloat(document.getElementById("luongcoban").value) 
+            + parseFloat(document.getElementById("phucap").value);
+        }
+    </script>
+    <h1>Nhập vào thông tin</h1>
+    Họ tên: <input name="hoten"><br><br>
+    Năm vào làm: <input id="namvaolam"><br><br>
+    Hệ số: <input id="heso"><br><br>
+    Lương cơ sở: <input id="luongcoso"><br><br>
+    <button onclick="tinh()">Tính lương</button><br><br>
+    Lương cơ bản: <input id="luongcoban" readonly><br><br>
+    Phụ cấp: <input id="phucap" readonly><br><br>
+    Thâm niên: <input id="thamnien" readonly><br><br>
+    Thành tiền: <input id="thanhtien" readonly>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bt4,12c</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <h2>Nhập Họ và Tên rồi nhấn Hiển thị</h2>
+    <input type="text" name="Ho" id="Ho" value="Họ">
+    <input type="text" name="Ten" id="Ten" value="Tên">
+    <input type="text" name="Hoten" id="Hoten" readonly>  
+    <input type="button" name="Hienthi" value="Hiển thị" onclick="hienThiHoTen()">
+    <script>
+        function hienThiHoTen()
+        {
+            var ho = document.getElementById("Ho").value;
+            var ten = document.getElementById("Ten").value;
+            document.getElementById("Hoten").value = ho + " " + ten;
+        }
+    </script>
+</body>
+</html>

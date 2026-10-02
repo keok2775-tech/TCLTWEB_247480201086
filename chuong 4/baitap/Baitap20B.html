@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bt4,20b</title>
+    <meta charset="UTF-8">
+</head>
+<body style="font-family: arial;background-color: pink;">
+    <script>
+        function tinh(){
+            thamnien.value=2025-namvaolam.value;
+            luongcoban.value=heso.value*parseFloat(luongcoso.value);
+            phucap.value=parseFloat(luongcoban.value)*0.25;
+            thanhtien.value=parseFloat(luongcoban.value) +parseFloat( phucap.value);
+        }
+    </script>
+    <h1>Nhập vào thông tin</h1>
+    Họ tên: <input name="hoten"><br><br>
+    Năm vào làm: <input id="namvaolam" ><br><br>
+    Hệ số: <input id="heso"><br><br>
+    Lương cơ sở: <input id="luongcoso"
+    onkeyup="tinh()"><br><br>
+    Lương cơ bản: <input id="luongcoban" readonly><br><br>
+    Phụ cấp: <input id="phucap" readonly ><br><br>
+    Thâm niên: <input id="thamnien" readonly><br><br>
+    Thành tiền: <input id="thanhtien" readonly>
+</body>
+</html>

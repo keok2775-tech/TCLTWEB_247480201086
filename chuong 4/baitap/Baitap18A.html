@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bt4,18a</title>
+    <meta charset=utf-8>
+</head>
+<script>
+    function KiemTra(){
+        const noiDung = document.getElementsByName("NoiDung")[0];
+        const soKyTu = document.getElementsByName("SoKyTu")[0];
+
+        if(noiDung.value.length > 20) {
+            alert("Bạn đã gõ quá số ký tự cho phép!");
+            // Có thể bạn muốn giới hạn số ký tự thực sự trong textarea:
+            noiDung.value = noiDung.value.substring(0, 200);
+        }
+        soKyTu.value = noiDung.value.length;
+    }
+</script>
+<body style="font-family: arial">
+    Số ký tự đã gõ: <input type="text" name="SoKyTu" readonly><br>
+    <textarea 
+        name="NoiDung" cols="50" rows="10" onkeyup="KiemTra();">
+    </textarea>
+</body>
+</html>

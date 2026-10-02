@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Bt4,7a</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script>
+            var D = new Date();
+            var hientai, namsinh;
+            var hientai = D.getFullYear();
+            do
+            { 
+                var namsinh = prompt(" bạn sinh năm bao nhiêu? : ", "");
+            } 
+            while (parseInt(namsinh) > hientai);
+            {
+                var tuoi = hientai - namsinh;
+                alert(" tuổi của bạn bây giờ là: " + tuoi);
+            }
+        </script>
+    </body>
+</html>

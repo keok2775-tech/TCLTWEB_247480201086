@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bt4,22a</title>
+    <meta charset="UTF-8">
+    <style>
+        .khoangcach {
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body style="font-family: arial;background-color: orange;">
+    <script>
+        var a="";
+        function tinh(value){
+            a+=value;
+            ketqua.value=a;
+        }
+        function hienthi(){
+            try{
+                const result=eval(a);
+                ketqua.value=result;
+                a=result;
+            } catch{
+                ketqua.value="Lỗi";
+                a="";
+            }
+        }
+        function xoa(){
+            a="";
+            ketqua.value=a
+        }
+    </script>
+    <div class="khoangcach">
+    <input style="text-align: right;" id="ketqua"><br>
+    <input type="button" value="0" onclick="tinh('0')" > &nbsp;
+    <input type="button" value="1" onclick="tinh('1')"> &nbsp;
+    <input type="button" value="2" onclick="tinh('2')"> &nbsp;
+    <input type="button" value="3" onclick="tinh('3')"> &nbsp;
+    <input type="button" value="4" onclick="tinh('4')"><br>
+    <input type="button" value="5" onclick="tinh('5')"> &nbsp;
+    <input type="button" value="6" onclick="tinh('6')"> &nbsp;
+    <input type="button" value="7" onclick="tinh('7')"> &nbsp;
+    <input type="button" value="8" onclick="tinh('8')"> &nbsp;
+    <input type="button" value="9" onclick="tinh('9')"> <br>
+    <input type="button" value="+" onclick="tinh('+')"> &nbsp;
+    <input type="button" value="--" onclick="tinh('-')"> &nbsp;
+    <input type="button" value="*" onclick="tinh('*')"> &nbsp;
+    <input type="button" value="/" onclick="tinh('/')"> &nbsp;&nbsp;
+    <input type="button" value="=" onclick="hienthi()"> <br>
+    <input type="button" value="C" onclick="xoa()">
+    </div>
+</body>
+</html>

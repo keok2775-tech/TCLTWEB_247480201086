@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bt4,14a</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <h2>Hãy nhập hai số và click vào nút tính tổng</h2>
+    <p>so hang 1: </p><input type="text" name="sohang1"id="sohang1" > 
+    <p>so hang 2: </p><input type="text"  name="sohang2"id="sohang2"> 
+    <p>ket qua: </p><input type="text"  name="ketqua"id="ketqua">
+    <input type="button" value="Cộng" onclick="cong()">
+    <input type="button" value="Trừ" onclick="tru()">
+    <input type="button" value="Nhân" onclick="nhan()">
+    <input type="button" value="Chia" onclick="chia()">
+    <script>
+        function cong()
+        {
+            let so1 = parseFloat(document.getElementsByName("sohang1")[0].value);
+            let so2 = parseFloat(document.getElementsByName("sohang2")[0].value);
+            let cong = so1 + so2;
+            document.getElementsByName("ketqua")[0].value = cong;
+        }
+        function tru()
+        {
+            let so1 = parseFloat(document.getElementsByName("sohang1")[0].value);
+            let so2 = parseFloat(document.getElementsByName("sohang2")[0].value);
+            let tru = so1 - so2;
+            document.getElementsByName("ketqua")[0].value = tru;
+        }
+        function nhan()
+        {
+            let so1 = parseFloat(document.getElementsByName("sohang1")[0].value);
+            let so2 = parseFloat(document.getElementsByName("sohang2")[0].value);
+            let nhan = so1 * so2;
+            document.getElementsByName("ketqua")[0].value = nhan;
+        }
+        function chia()
+        {
+            let so1 = parseFloat(document.getElementsByName("sohang1")[0].value);
+            let so2 = parseFloat(document.getElementsByName("sohang2")[0].value);
+            let chia = so1 / so2;
+            document.getElementsByName("ketqua")[0].value = chia;
+        }
+    </script>
+</body>
+</html>                         

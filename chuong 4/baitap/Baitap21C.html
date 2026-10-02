@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bt4,21c</title>
+    <meta charset="UTF-8">
+</head>
+<body style="font-family: arial;background-color: lightblue;">
+    <h2>Hãy nhập hai số và chọn phép tính</h2>
+    <p>số 01: </p><input type="text" name="so01" id="so01">
+    <p>số 02: </p><input type="text" name="so02" id="so02">
+    <p>phép tính: </p>
+    <select id="pheptinh">
+        <option value="+">Cộng</option>
+        <option value="-">Trừ</option>
+        <option value="*">Nhân</option>
+        <option value="/">Chia</option>
+    </select>
+    <br><br>
+    <input type="button" value="Tính" onclick="tinh()">
+    <p>kết quả: </p><input type="text" name="ketqua" id="ketqua">
+    <script>
+        function tinh() {
+            let so1 = parseFloat(document.getElementById("so01").value);
+            let so2 = parseFloat(document.getElementById("so02").value);
+            let pheptinh = document.getElementById("pheptinh").value;
+            let ketqua;
+
+            if (pheptinh === "+") {
+                ketqua = so1 + so2;
+            } else if (pheptinh === "-") {
+                ketqua = so1 - so2;
+            } else if (pheptinh === "*") {
+                ketqua = so1 * so2;
+            } else if (pheptinh === "/") {
+                ketqua = so1 / so2;
+            }
+
+            document.getElementById("ketqua").value = ketqua;
+        }
+    </script>
+</body>
+</html>

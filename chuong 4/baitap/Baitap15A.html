@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bt4,15a</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <h1><b>Thay đổi</b></h1>
+    <lable for ="">Tiêu đề: </lable>
+    <input type="" value="" id="tieude">
+    <lable for ="">Màu chữ: </lable>
+    <input type="" value="" id="mauchu">
+    <lable for ="">Trạng thái: </lable>
+    <input type="" value="" id="trangthai">
+    <lable for ="">Màu nền: </lable>
+    <input type="" value="" id="maunen">
+    <button onclick="Capnhat()">Thay đổi</button>
+    <script>
+        function Capnhat()
+        {
+            let maunen = document.getElementById("maunen").value;
+            let mauchu = document.getElementById("mauchu").value;
+            let tieude = document.getElementById("tieude").value;
+            let trangthai = document.getElementById("trangthai").value;
+            document.title = tieude;
+            document.body.style.backgroundColor = maunen;
+            document.body.style.color = mauchu;
+            window.status = trangthai;
+        }
+    </script>
+</body>
+</html>

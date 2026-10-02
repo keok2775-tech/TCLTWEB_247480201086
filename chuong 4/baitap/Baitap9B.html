@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai8B</title>
+</head>
+<body>
+    <script language="JavaScript">
+        var devices = [];
+        var count = prompt("Bạn muốn nhập bao nhiêu thiết bị văn phòng?", 5);
+
+        for (var i = 0; i < count; i++) {
+            devices[i] = prompt("Nhập vào tên thiết bị:", "");
+        }
+
+        var computers = devices.filter(device => device.toLowerCase() === "computer");
+
+        document.write("<h1>Danh sách thiết bị có tên 'Computer':</h1>");
+        if (computers.length > 0) {
+            document.write("<table border='1'><tr><th>STT</th><th>Tên Thiết Bị</th></tr>");
+            for (var j = 0; j < computers.length; j++) {
+                document.write("<tr><td>" + (j + 1) + "</td><td>" + computers[j] + "</td></tr>");
+            }
+            document.write("</table>");
+        } else {
+            document.write("<p>Không có thiết bị nào có tên 'Computer'.</p>");
+        }
+    </script>
+</body>
+</html>
