@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+   <meta charset="UTF-8">
+   <title>Bài tập 3.7</title>
+<!-- các thuộc tính và ý nghĩa của  nó
+ - display :(tùy chỉnh cách thức hiển thị của elament)
+ - value :flex (tạo ra một container linh hoạt)
+  value block (tạo ra một khối hiển thị)
+  value inline (tạo ra một khối hiển thị trên cùng một dòng)
+  value inline-block (tạo ra một khối hiển thị trên cùng một dòng nhưng có thể tùy chỉnh chiều cao và chiều rộng)
+  value none(ẩn elament)
+  value grid (tạo ra một container linh hoạt theo dạng lưới)
+ - border : (tạo đường viền cho elament)
+ - text-decoration:(tùy chỉnh cách thức hiển thị của elament)
+ argin-bottom: (tạo khoảng cách giữa các elament)
+  padding: (tạo khoảng cách giữa các elament)
+  href: (tạo liên kết cho elament)
+  border-radius: (tạo bo tròn cho elament)
+   border: (tạo đường viền cho elament); (1px)độ dày, (solid)kiểu đường viền, màu sắc
+
+ -->
+   <style>
+       body {
+           margin: 30px;
+           font-family: Arial;
+       }
+
+       .khung {
+           width: 100%;
+           height: 100%;
+           display: flex;
+           border: 1px solid black;
+       }
+
+       /* Menu bên trái */
+       .menu {
+           width: 230px;
+           background-color: #222;
+           padding: 15px;
+       }
+
+       .menu a {
+           display: block;
+           color: white;
+           font-weight: bold;
+           text-decoration: underline;
+           margin-bottom: 12px;
+       }
+
+       
+       .noidung {
+           flex: 1;
+           background-color: #eee;
+           padding: 15px;
+       }
+
+       .noidung h3 {
+           margin-top: 0;
+       }
+   </style>
+</head>
+
+<body>
+
+   <div class="khung">
+
+     
+       <div class="menu">
+
+           <a href="gioithieu.htm">Giới thiệu</a>
+
+           <a href="tintuc.htm">Tin tức</a>
+
+           <a href="daotao.htm">Đào tạo</a>
+
+           <a href="thoikhoabieu.htm">Thời khóa biểu</a>
+
+           <a href="lichthi.htm">Lịch thi</a>
+
+           <a href="phongchucnang.htm">Phòng chức năng</a>
+
+           <a href="cackhoa.htm">Các Khoa</a>
+
+       </div>
+
+
+      
+       <div class="noidung">
+
+           <h3>Giới thiệu về Trung tâm Công nghệ phần mềm</h3>
+
+           <p>
+               Trung tâm được thành lập ngày 10/02/1999,
+               trụ sở đặt tại Khoa Kỹ thuật và Công nghệ -
+               Trường Đại học Bạc Liêu,...
+           </p>
+
+       </div>
+
+   </div>
+
+</body>
+</html>
